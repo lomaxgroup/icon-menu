@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0B0D">
+<title>ICON — меню</title>
+<meta name="description" content="Меню ресторана и караоке ICON: кухня, завтраки, бар, коктейли.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ICON — меню">
+<meta property="og:description" content="Меню ресторана и караоке ICON: кухня, завтраки, бар, коктейли.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Montserrat:wght@300;500;800&family=Jost:wght@300;400&display=swap">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#0B0B0D;color:#F4EFE3;font-family:'Jost','Helvetica Neue',Arial,sans-serif;
+ padding-bottom:env(safe-area-inset-bottom)}
+img{max-width:100%;display:block}
+.wrap{max-width:560px;margin:0 auto;padding:0 18px}
+
+.hero{text-align:center;padding:26px 18px 12px}
+.mark{font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:38px;letter-spacing:.08em;padding-left:.08em;line-height:1}
+.sub{font-family:'Montserrat',Arial,sans-serif;font-weight:300;font-size:8.5px;letter-spacing:.4em;color:#C9A24A;text-transform:uppercase;padding-left:.4em;margin-top:8px}
+.hero img{width:116px;height:auto;margin:14px auto 8px;mix-blend-mode:lighten}
+.motto{font-family:'Montserrat',Arial,sans-serif;font-weight:300;font-size:9px;letter-spacing:.3em;color:#8F8877;text-transform:uppercase;padding-left:.3em}
+
+.bar{position:sticky;top:0;z-index:20;background:rgba(11,11,13,.96);backdrop-filter:blur(8px);
+ border-bottom:1px solid #2A2418;padding:10px 0 9px}
+.tabs{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:0 18px 2px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid #3A342A;background:transparent;color:#C9C2B3;
+ font:500 11px/1 'Montserrat',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;
+ padding:10px 14px;border-radius:0;cursor:pointer;min-height:38px}
+.tab[aria-current="true"]{border-color:#C9A24A;color:#0B0B0D;background:#C9A24A}
+.srch{margin:9px 18px 0;position:relative}
+.srch input{width:100%;background:#131316;border:1px solid #2F2A1E;color:#F4EFE3;
+ font:400 14px 'Jost',sans-serif;padding:11px 34px 11px 12px;border-radius:0;min-height:42px}
+.srch input::placeholder{color:#7C7666}
+.srch input:focus{outline:2px solid #C9A24A;outline-offset:1px}
+.clr{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;
+ color:#8F8877;font-size:20px;line-height:1;padding:6px 8px;cursor:pointer;min-height:38px}
+
+.book{padding:22px 0 6px}
+.book.light{background:#FBF8F0;color:#1D1C1A;margin-top:18px;padding-bottom:22px}
+.book.light .st{color:#8F6A22}
+.book.light .rule{background:#CBBA92}
+.book.light .n{color:#1D1C1A}
+.book.light .d{color:#57513F}
+.book.light .g{color:#6E6858}
+.book.light .p{color:#8F6A22}
+.book.light .bt{color:#6E6858}
+.book.light .gr{color:#8F6A22}
+
+.bt{font-family:'Montserrat',Arial,sans-serif;font-weight:300;font-size:9px;letter-spacing:.34em;
+ text-transform:uppercase;color:#8F8877;text-align:center;padding-left:.34em;margin-bottom:14px}
+.sh{display:flex;align-items:center;gap:10px;margin:22px 0 10px;scroll-margin-top:118px}
+.rule{flex:1;height:1px;background:#5A4A22}
+.st{font-family:'Prata',Georgia,serif;font-size:14px;letter-spacing:.2em;color:#E6CE94;padding-left:.2em;white-space:nowrap}
+.gr{font:500 9px/1 'Montserrat',Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#C9A24A;padding:12px 0 2px}
+
+.it{display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid #1E1D19}
+.book.light .it{border-bottom-color:#E4DCC9}
+.n{font:500 13px/1.35 'Montserrat',Arial,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:#F4EFE3;flex:1 1 auto;min-width:0}
+.meta{flex:0 0 auto;display:flex;align-items:baseline;gap:8px}
+.g{font:400 10.5px 'Jost',sans-serif;color:#9C9484;white-space:nowrap;font-variant-numeric:tabular-nums}
+.p{font-family:'Prata',Georgia,serif;font-size:14px;color:#E6CE94;white-space:nowrap;font-variant-numeric:tabular-nums}
+.d{font:300 11px/1.45 'Jost',sans-serif;color:#C9C2B3;margin:-4px 0 2px}
+.add .n{text-transform:none;font-weight:400;font-size:12px;line-height:1.5}
+
+.none{text-align:center;color:#8F8877;font-size:13px;padding:40px 0}
+.foot{text-align:center;padding:28px 18px 120px;color:#7C7666;font-size:11px;letter-spacing:.14em}
+.foot a{color:#C9A24A}
+
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:8px;
+ padding:10px 18px calc(10px + env(safe-area-inset-bottom));background:rgba(11,11,13,.97);
+ backdrop-filter:blur(8px);border-top:1px solid #2A2418}
+.dock button{flex:1;min-height:46px;padding:0 6px;border-radius:0;cursor:pointer;
+ font:500 10px/1.2 'Montserrat',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.b1{border:1px solid #C9A24A;background:#C9A24A;color:#0B0B0D}
+.b2{border:1px solid #55503F;background:transparent;color:#E6CE94}
+
+dialog{border:1px solid #C9A24A;background:#0B0B0D;color:#F4EFE3;padding:0;width:min(92vw,420px)}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+.dg{padding:22px}
+.dg h2{font-family:'Prata',Georgia,serif;font-size:19px;letter-spacing:.16em;color:#E6CE94;margin:0 0 6px;font-weight:400}
+.dg p{font:300 12.5px/1.5 'Jost',sans-serif;color:#C9C2B3;margin:0 0 14px}
+.dg input{width:100%;background:#131316;border:1px solid #2F2A1E;color:#F4EFE3;
+ font:400 15px 'Jost',sans-serif;padding:12px;min-height:46px}
+.dg input:focus{outline:2px solid #C9A24A;outline-offset:1px}
+.dg .row{display:flex;gap:8px;margin-top:14px}
+.dg .row button{flex:1;min-height:44px;cursor:pointer;font:500 11px/1 'Montserrat',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.big{display:none;text-align:center;padding:26px 8px}
+.big .q{font-family:'Prata',Georgia,serif;font-size:26px;color:#E6CE94;word-break:break-word}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="mark">ICON</div>
+  <div class="sub">Restaurant &amp; Karaoke</div>
+  <img src="tree-dark.webp" width="520" height="690" alt="" fetchpriority="high">
+  <div class="motto">Good food · Good mood</div>
+</header>
+
+<nav class="bar" aria-label="Разделы меню">
+  <div class="tabs" id="tabs">
+    <button class="tab" data-go="kitchen" aria-current="true">Кухня</button>
+    <button class="tab" data-go="breakfast">Завтраки</button>
+    <button class="tab" data-go="bar">Бар</button>
+    <button class="tab" data-go="cocktails">Коктейли</button>
+  </div>
+  <div class="srch">
+    <label for="q" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Поиск по меню</label>
+    <input id="q" type="search" placeholder="Поиск по меню" autocomplete="off" enterkeyhint="search">
+    <button class="clr" id="clr" type="button" aria-label="Очистить поиск" hidden>×</button>
+  </div>
+</nav>
+
+<main id="app"></main>
+
+<div class="foot">
+  ICON · Restaurant &amp; Karaoke<br>
+  <a href="https://instagram.com/icon_karaoke_club">@icon_karaoke_club</a><br>
+  <span style="color:#5C5748">Цены указаны в рублях</span>
+</div>
+
+<div class="dock">
+  <button class="b1" id="song" type="button">Заказать песню</button>
+  <button class="b2" id="waiter" type="button">Позвать официанта</button>
+</div>
+
+<dialog id="dlg">
+  <div class="dg">
+    <h2 id="dlgT">Заказать песню</h2>
+    <p id="dlgP">Напишите исполнителя и название — покажите экран официанту или отправьте ведущему.</p>
+    <input id="songIn" type="text" placeholder="Исполнитель — название" autocomplete="off">
+    <div class="big" id="big"><div class="q" id="bigQ"></div></div>
+    <div class="row">
+      <button class="b1" id="show" type="button">Показать крупно</button>
+      <button class="b2" id="close" type="button">Закрыть</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const DATA = [{"id":"kitchen","title":"Кухня","theme":"dark","sections":[{"name":"STARTS","items":[{"n":"Патэ с креветкой","d":"С хрустящей чиабаттой","g":"170 г","p":"750 ₽"},{"n":"Патэ с лососем","d":"С хрустящей чиабаттой","g":"200 г","p":"750 ₽"},{"n":"Антипасти","d":"Фрукты, сыр, мёд, орехи, маслины, оливки, сыровяленое мясо","g":"390 г","p":"3000 ₽"},{"n":"Дары моря плато","d":"Масляная рыба, лосось, горбуша, масло сливочное, хрустящая чиабатта","g":"[ГРАММ]","p":"3000 ₽"},{"n":"Мясное плато","d":"Вяленые курица, говядина, индейка, свинина, хамон, суджук, хрустящая чиабатта","g":"[ГРАММ]","p":"3500 ₽"},{"n":"Фруктовое плато экзот","d":"Тарелка экзотических и сезонных фруктов и ягод","g":"1900 г","p":"3500 ₽"},{"n":"Соленья","d":"Огурец, помидор, капуста квашеная, чеснок солёный, перец цицак","g":"350 г","p":"1500 ₽"},{"n":"Сырное плато","d":"Пармезан, чеддер, сыр с пажитником, гауда, мёд, орехи, виноград","g":"400 г","p":"2500 ₽"},{"n":"Ленивые суши с креветкой","g":"200 г","p":"750 ₽"},{"n":"Ленивые суши с лососем","g":"200 г","p":"750 ₽"},{"n":"Сырные шарики со снежным крабом","d":"Подаются со сладким чили","g":"200 г","p":"550 ₽"},{"n":"Сырные палочки","d":"Подаются с чесночным соусом","g":"200 г","p":"650 ₽"},{"n":"Креветка спайси","g":"200 г","p":"750 ₽"},{"n":"Креветки по-тайски","g":"330 г","p":"950 ₽"},{"n":"Куриные крылышки","d":"В соусе баффало","g":"310 г","p":"650 ₽"},{"n":"Суджук","g":"50 г","p":"550 ₽"}]},{"name":"NUTS","items":[{"n":"Орехи в ассортименте","g":"100 г","p":"550 ₽"}]},{"name":"SALAD","items":[{"n":"Цезарь с креветкой","g":"260 г","p":"800 ₽"},{"n":"Цезарь с курицей","g":"300 г","p":"700 ₽"},{"n":"Цезарь с лососем","g":"270 г","p":"800 ₽"},{"n":"Греческий салат","d":"На подушке из крема фета","g":"300 г","p":"650 ₽"},{"n":"Салат с цыплёнком","d":"Апельсин, цитрусовый соус","g":"280 г","p":"750 ₽"},{"n":"Салат с креветками","d":"Авокадо, соус фейхоа","g":"210 г","p":"850 ₽"},{"n":"Салат с ростбифом","d":"Маринованный перец, страчателла","g":"330 г","p":"950 ₽"}]},{"name":"PASTA · BURGER · SHAURMA","items":[{"n":"Паста Nero","d":"С морепродуктами","g":"300 г","p":"800 ₽"},{"n":"Паста том ям","g":"320 г","p":"750 ₽"},{"n":"Паста с телятиной","d":"Пророщенная соя, овощи","g":"330 г","p":"850 ₽"},{"n":"Карбонара","g":"190 г","p":"650 ₽"},{"n":"Бургер с мраморной говядиной","d":"В чёрной булке","g":"600 г","p":"650 ₽"},{"n":"Шаурма с креветкой","d":"Спайси соус","g":"300 г","p":"750 ₽"},{"n":"Шаурма с телятиной","d":"С овощами","g":"380 г","p":"750 ₽"}]},{"name":"FIRST COURSE","items":[{"n":"Том ям","g":"450 г","p":"990 ₽"},{"n":"Борщ с говядиной","g":"400 г","p":"550 ₽"}]},{"name":"FISH & MEAT","items":[{"n":"Лосось запечённый","d":"Лимонный соус, пюре из брокколи","g":"280 г","p":"1100 ₽"},{"n":"Вырезка свиная","d":"Луково-кремовый соус, картофельное пюре, шпинат","g":"350 г","p":"750 ₽"},{"n":"Стейк из телятины","d":"Пюре из цветной капусты, соус баффало, шпинат, томаты","g":"310 г","p":"1200 ₽"},{"n":"Бефстроганов из телятины","d":"С грибами и картофельным пюре","g":"350 г","p":"750 ₽"},{"n":"Куриная грудка фаршированная","d":"Сырно-шпинатный соус, подушка из картофельного крема","g":"340 г","p":"750 ₽"},{"n":"Утиная грудка","d":"С фруктами и малиновым соусом","g":"350 г","p":"1200 ₽"}]},{"name":"DESSERTS","items":[{"n":"Наполеон домашний","d":"С заварным кремом","g":"150 г","p":"650 ₽"},{"n":"Чизкейк классический","g":"150 г","p":"650 ₽"},{"n":"Профитроли","d":"С заварным кремом","g":"150 г","p":"650 ₽"},{"n":"Мороженое","g":"100 г","p":"650 ₽"},{"n":"Конфеты в подарок","p":"5500 ₽"}]}]},{"id":"breakfast","title":"Завтраки","theme":"light","sections":[{"name":"ЗАВТРАК · КОНСТРУКТОР","items":[{"n":"Яйца","d":"Глазунья · скрембл · омлет · пашот","g":"2 шт","p":"250 ₽"},{"n":"Каши","d":"Овсянка · геркулес · гречка · рис","g":"200 г","p":"200 ₽"},{"n":"Тосты","d":"Белый · чёрный · мультизлаковый · цельнозерновой","g":"2 шт","p":"200 ₽"},{"n":"Бельгийские вафли · панкейки","g":"2 шт","p":"250 ₽"},{"n":"Блины","g":"2 шт","p":"250 ₽"},{"n":"Сырники","g":"2 шт","p":"250 ₽"}]},{"name":"ДОБАВКИ","add":true,"items":[{"n":"Лосось · Креветки · Бекон · Куриная грудка · Ростбиф · Ветчина","p":"250 ₽"},{"n":"Авокадо","p":"150 ₽"},{"n":"Пармезан · Сулугуни · Рикотта · Страчателла · Креметта · Фета · Моцарелла · Сливочное масло · Питахайя · Мёд · Заварной крем · Сгущёнка","p":"100 ₽"},{"n":"Зелень: руккола, кинза, петрушка · Банан · Киви · Яблоко · Груша · Ананас · Апельсин · Грейпфрут · Виноград · Помело · Чиа · Тыквенные семечки · Семена подсолнечника · Семена льна · Ягоды годжи · Сметана · Греческий йогурт","p":"50 ₽"}]},{"name":"ПЕРВЫЕ БЛЮДА","items":[{"n":"Том ям","g":"300 г","p":"990 ₽"},{"n":"Борщ с говядиной","d":"Сметана, чёрный хлеб, сало, чеснок, зелень","g":"300 г","p":"499 ₽"}]}]},{"id":"bar","title":"Бар","theme":"dark","sections":[{"name":"WHISKY","items":[{"gr":"Ireland"},{"n":"Jameson","v":"0,7","g":"40 мл","p":"480 ₽"},{"gr":"Scotland"},{"n":"Ballantine's","v":"0,7","g":"40 мл","p":"400 ₽"},{"n":"Johnnie Walker Red Label","v":"0,7","g":"40 мл","p":"440 ₽"},{"n":"Chivas Regal 12","v":"0,7","g":"40 мл","p":"600 ₽"},{"gr":"Single malts"},{"n":"Singleton 12","v":"0,7","g":"40 мл","p":"900 ₽"},{"n":"Glenfiddich","v":"0,7","g":"40 мл","p":"960 ₽"},{"n":"Macallan 12","v":"0,7","g":"40 мл","p":"2700 ₽"},{"gr":"America"},{"n":"Jim Beam","v":"0,7","g":"40 мл","p":"440 ₽"},{"n":"Jim Beam Red Stag","v":"0,7","g":"40 мл","p":"480 ₽"},{"n":"Jack Daniel's","v":"0,7","g":"40 мл","p":"520 ₽"}]},{"name":"COGNAC","items":[{"gr":"France"},{"n":"Martell VS","v":"0,7","g":"40 мл","p":"960 ₽"},{"n":"Martell VSOP","v":"0,7","g":"40 мл","p":"1280 ₽"},{"gr":"Арарат"},{"n":"Ararat 5","v":"0,5","g":"40 мл","p":"356 ₽"},{"n":"Ararat Ахтамар 10","v":"0,5","g":"40 мл","p":"700 ₽"}]},{"name":"GIN","items":[{"n":"Barrister","v":"0,7","g":"40 мл","p":"220 ₽"},{"n":"Broom Dry","v":"0,5","g":"40 мл","p":"460 ₽"}]},{"name":"VODKA","items":[{"n":"Beluga Noble","v":"0,5","g":"40 мл","p":"360 ₽"},{"n":"Romanov","v":"0,5","g":"40 мл","p":"360 ₽"},{"n":"Mamont","v":"0,5","g":"40 мл","p":"400 ₽"},{"n":"Mont Blanc","v":"0,5","g":"40 мл","p":"520 ₽"},{"n":"Onegin","v":"0,5","g":"40 мл","p":"440 ₽"}]},{"name":"TEQUILA","items":[{"n":"Campo Azul Blanco","v":"1,0","g":"40 мл","p":"320 ₽"},{"n":"Olmeca Gold","v":"0,7","g":"40 мл","p":"400 ₽"}]},{"name":"RUM","items":[{"n":"Botafogo","d":"Бельгия · white / black / spiced","v":"0,7","g":"40 мл","p":"440 ₽"},{"n":"Don Papa","d":"Филиппины","v":"0,7","g":"40 мл","p":"1280 ₽"},{"n":"Zacapa 23 Solera Gran Reserva","d":"Гватемала","v":"0,7","g":"40 мл","p":"1350 ₽"},{"n":"Zacapa Centenario Solera Gran Reserva Especial XO","d":"Гватемала","v":"0,7","g":"40 мл","p":"1500 ₽"}]},{"name":"VERMOUTH","items":[{"n":"Martini Bianco","v":"1,0","g":"40 мл","p":"320 ₽"},{"n":"Martini Fiero","v":"1,0","g":"40 мл","p":"320 ₽"}]},{"name":"LIQUEURS · BITTERS","items":[{"n":"Jägermeister","v":"0,7","g":"40 мл","p":"480 ₽"},{"n":"Absente","v":"0,7","g":"40 мл","p":"400 ₽"},{"n":"Sambuca","v":"0,7","g":"40 мл","p":"440 ₽"},{"n":"Aperol","v":"1,0","g":"40 мл","p":"480 ₽"},{"n":"Campari","v":"1,0","g":"40 мл","p":"480 ₽"}]},{"name":"CHAMPAGNE","items":[{"n":"Moët & Chandon Impérial Brut","d":"Франция · белое брют","v":"0,75","g":"бутылка","p":"25 000 ₽"},{"n":"Moët & Chandon Rosé Impérial","d":"Франция · розовое брют","v":"0,75","g":"бутылка","p":"27 000 ₽"},{"n":"Moët & Chandon Ice Impérial","d":"Франция","v":"0,75","g":"бутылка","p":"28 000 ₽"},{"n":"Veuve Clicquot","d":"Франция · белое брют","v":"0,75","g":"бутылка","p":"35 000 ₽"},{"n":"Ruinart Blanc de Blancs","d":"Франция","v":"0,75","g":"бутылка","p":"45 000 ₽"},{"n":"Dom Pérignon Vintage Brut","d":"Франция · белое брют","v":"0,75","g":"бутылка","p":"120 000 ₽"},{"n":"Louis Roederer Cristal","d":"Франция · белое брют","v":"0,75","g":"бутылка","p":"150 000 ₽"}]},{"name":"SPARKLING","items":[{"n":"Martini Asti","v":"0,75","p":"5500 ₽"},{"n":"Martini Prosecco","v":"0,75","p":"5500 ₽"},{"n":"Mondoro Asti","v":"0,75","p":"5500 ₽"},{"n":"Mondoro Prosecco","v":"0,75","p":"5500 ₽"},{"n":"Bruni Asti","v":"0,75","p":"5500 ₽"},{"n":"Bruni Prosecco","v":"0,75","p":"5500 ₽"},{"n":"Nozeco","d":"Без алкоголя","v":"0,75","p":"5000 ₽"}]},{"name":"WINE","items":[{"n":"Pinot Grigio","d":"Италия, белое сухое · бокал 725 ₽","v":"0,75","p":"4350 ₽"},{"n":"Merlot","d":"Чили, красное сухое · бокал 725 ₽","v":"0,75","p":"4350 ₽"},{"n":"Vive la Vie","d":"Без алкоголя, красное полусладкое","v":"0,75","p":"2500 ₽"}]},{"name":"BEER","items":[{"n":"Beer","d":"Ассортимент уточняйте у официанта","v":"0,33","p":"600 ₽"},{"n":"Beer alcohol free","v":"0,33","p":"600 ₽"}]},{"name":"SPECIALS","items":[{"n":"Prosecco безлимит","p":"2500 ₽"},{"n":"Aperol Spritz 1 + 1 = 3","p":"1500 ₽"},{"n":"Настойки","g":"40 мл","p":"350 ₽"}]},{"name":"LEMONADES","items":[{"n":"Citrus lemonade","d":"Цитрусовый","v":"1,0","p":"800 ₽"},{"n":"Raspberry mint","d":"Малина, мята","v":"1,0","p":"800 ₽"},{"n":"Raspberry lime","d":"Малина, лайм","v":"1,0","p":"800 ₽"},{"n":"Mojito","d":"Мохито","v":"1,0","p":"800 ₽"},{"n":"Strawberry mojito","d":"Клубничный мохито","v":"1,0","p":"800 ₽"},{"n":"Currant violet citrus","d":"Смородина, фиалка, цитрус","v":"1,0","p":"800 ₽"},{"n":"Mango · passion fruit","d":"Манго, маракуйя","v":"1,0","p":"800 ₽"},{"n":"Mango · orange","d":"Манго, апельсин","v":"1,0","p":"800 ₽"}]},{"name":"TEA","items":[{"n":"Ассам","d":"Чёрный классический","v":"0,95","p":"550 ₽"},{"n":"Чёрный с чабрецом","v":"0,95","p":"550 ₽"},{"n":"Эрл Грей","v":"0,95","p":"550 ₽"},{"n":"Сенча","d":"Зелёный классический","v":"0,95","p":"550 ₽"},{"n":"Зелёный с жасмином","v":"0,95","p":"550 ₽"},{"n":"Молочный улун","v":"0,95","p":"550 ₽"},{"n":"Наглый фрукт","v":"0,95","p":"550 ₽"},{"n":"Глинтвейн б/а","v":"0,3 / 0,4","p":"350 / 450 ₽"}]},{"name":"COFFEE","items":[{"n":"Эспрессо","v":"0,2 / 0,36","p":"200 / 300 ₽"},{"n":"Американо","v":"0,3 / 0,4","p":"250 / 350 ₽"},{"n":"Капучино","v":"0,3 / 0,4","p":"350 / 400 ₽"},{"n":"Латте","v":"0,3 / 0,4","p":"350 / 400 ₽"},{"n":"Флет уайт","v":"0,25","p":"350 ₽"},{"n":"Раф","v":"0,3 / 0,4","p":"400 / 450 ₽"},{"n":"Какао","v":"0,3 / 0,4","p":"300 / 350 ₽"},{"n":"Альтернативное молоко","p":"100 ₽"}]},{"name":"SOFT DRINKS","items":[{"n":"Juice","d":"Ассортимент уточняйте у официанта","v":"1,0 / 0,33","p":"750 / 250 ₽"},{"n":"Morse","v":"1,0 / 0,33","p":"900 / 300 ₽"},{"n":"Cola оригинал, стекло","v":"0,33","p":"450 ₽"},{"n":"Cola оригинал, ж/б","v":"0,33","p":"450 ₽"},{"n":"Добрый Кола, ж/б","v":"0,33","p":"250 ₽"},{"n":"Red Bull","v":"0,25","p":"350 ₽"},{"n":"Water mineral","d":"Still / sparkling","v":"0,5","p":"250 ₽"},{"n":"Рычал Су","d":"Минеральная вода","v":"0,5","p":"350 ₽"}]}]},{"id":"cocktails","title":"Коктейли","theme":"dark","sections":[{"name":"CLASSIC COCKTAILS","items":[{"n":"Текила санрайз","d":"Текила, апельсиновый сок, гренадин","g":"350 мл","p":"700 ₽"},{"n":"Голубая лагуна","d":"Водка, ликёр блю кюрасао, спрайт","g":"300 мл","p":"700 ₽"},{"n":"Лонг айленд","d":"Водка, белый ром, текила, джин, триппл сек, кола","g":"450 мл","p":"800 ₽"},{"n":"Пина коллада","d":"Белый ром, кокосовый сироп, ананасовый сок, взбитые сливки","g":"300 мл","p":"700 ₽"},{"n":"Космополитан","d":"Водка, триппл сек, морс, сок лайма","g":"150 мл","p":"600 ₽"},{"n":"Маргарита","d":"Текила, трипл сек, сок лайма","g":"200 мл","p":"600 ₽"},{"n":"Дайкири","d":"Белый ром, сок лайма","g":"150 мл","p":"600 ₽"},{"n":"Негрони","d":"Джин, красный вермут, кампари","g":"200 мл","p":"700 ₽"},{"n":"Белый русский","d":"Водка, кофейный ликёр, сливки","g":"200 мл","p":"600 ₽"},{"n":"Секс на пляже","d":"Водка, трипл сек, апельсиновый сок, персиковый сок, гренадин","g":"350 мл","p":"700 ₽"},{"n":"Джин тоник","d":"Джин, тоник","g":"250 мл","p":"600 ₽"},{"n":"Мохито","d":"Белый ром, спрайт, сок лайма, мята","g":"250 мл","p":"600 ₽"},{"n":"Апероль шприц","d":"Апероль, сухое игристое","g":"350 мл","p":"750 ₽"},{"n":"Оргазм","d":"Водка, кофейный ликёр, сливочный ликёр, взбитые сливки","g":"250 мл","p":"800 ₽"},{"n":"Зелёная фея","d":"Белый ром, водка, текила, абсент, ликёр блю кюрасао, энергетик","g":"350 мл","p":"900 ₽"},{"n":"Май тай","d":"Белый ром, пряный ром, ананасовый сок, миндальный сироп","g":"250 мл","p":"700 ₽"}]},{"name":"SHOTS","items":[{"n":"Б52","d":"Кофейный ликёр, сливочный ликёр, трипл сек","g":"50 мл","p":"600 ₽"},{"n":"Б53","d":"Кофейный ликёр, сливочный ликёр, абсент","g":"50 мл","p":"600 ₽"},{"n":"Облако","d":"Самбука, текила, абсент, блю кюрасао ликёр, сливочный ликёр","g":"50 мл","p":"600 ₽"},{"n":"Хиросима","d":"Самбука, сливочный ликёр, абсент, гренадин","g":"50 мл","p":"600 ₽"},{"n":"Кукарача","d":"Текила, ликёр цедры апельсина, ликёр манго","g":"50 мл","p":"1000 ₽"},{"n":"Россия","d":"Водка, ликёр блю кюрасао, гренадин","g":"50 мл","p":"600 ₽"},{"n":"Текила бум","d":"Текила, спрайт","g":"100 мл","p":"1000 ₽"}]}]}];
+
+const app = document.getElementById('app');
+const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+function itemHTML(it, add) {
+  if (it.gr) return '<div class="gr">' + esc(it.gr) + '</div>';
+  const meta = '<div class="meta">' + (it.g ? '<div class="g">' + esc(it.g) + '</div>' : '') +
+    (it.v ? '<div class="g">' + esc(it.v) + '</div>' : '') + '<div class="p">' + esc(it.p) + '</div></div>';
+  return '<div class="it' + (add ? ' add' : '') + '"><div style="flex:1 1 auto;min-width:0"><div class="n">' +
+    esc(it.n) + '</div>' + (it.d ? '<div class="d">' + esc(it.d) + '</div>' : '') + '</div>' + meta + '</div>';
+}
+
+function render(filter) {
+  const f = (filter || '').trim().toLowerCase();
+  let out = '', found = 0;
+  for (const b of DATA) {
+    let body = '';
+    for (const s of b.sections) {
+      const items = f ? s.items.filter((i) => i.n && ((i.n + ' ' + (i.d || '')).toLowerCase().includes(f))) : s.items;
+      if (!items.length) continue;
+      found += items.filter((i) => i.n).length;
+      body += '<div class="sh" id="s-' + encodeURIComponent(s.name) + '"><div class="rule"></div><div class="st">' +
+        esc(s.name) + '</div><div class="rule"></div></div>' + items.map((i) => itemHTML(i, s.add)).join('');
+    }
+    if (!body) continue;
+    out += '<section class="book ' + b.theme + '" id="' + b.id + '"><div class="wrap"><div class="bt">' +
+      esc(b.title) + '</div>' + body + '</div></section>';
+  }
+  app.innerHTML = out || '<div class="none">Ничего не нашлось</div>';
+  return found;
+}
+
+render('');
+
+const q = document.getElementById('q'), clr = document.getElementById('clr');
+let t;
+q.addEventListener('input', () => {
+  clr.hidden = !q.value;
+  clearTimeout(t);
+  t = setTimeout(() => render(q.value), 120);
+});
+clr.addEventListener('click', () => { q.value = ''; clr.hidden = true; render(''); q.focus(); });
+
+document.getElementById('tabs').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-go]');
+  if (!b) return;
+  if (q.value) { q.value = ''; clr.hidden = true; render(''); }
+  const el = document.getElementById(b.dataset.go);
+  if (el) window.scrollTo({ top: el.offsetTop - 104, behavior: 'smooth' });
+});
+
+const tabs = [...document.querySelectorAll('.tab')];
+addEventListener('scroll', () => {
+  let cur = tabs[0];
+  for (const b of tabs) {
+    const el = document.getElementById(b.dataset.go);
+    if (el && el.offsetTop - 140 <= scrollY) cur = b;
+  }
+  tabs.forEach((b) => b.setAttribute('aria-current', b === cur ? 'true' : 'false'));
+}, { passive: true });
+
+const dlg = document.getElementById('dlg'), big = document.getElementById('big'), bigQ = document.getElementById('bigQ');
+const songIn = document.getElementById('songIn'), dlgT = document.getElementById('dlgT'), dlgP = document.getElementById('dlgP');
+const showBtn = document.getElementById('show');
+
+function openDlg(mode) {
+  big.style.display = 'none';
+  if (mode === 'song') {
+    dlgT.textContent = 'Заказать песню';
+    dlgP.textContent = 'Напишите исполнителя и название — покажите экран официанту или ведущему.';
+    songIn.style.display = ''; songIn.value = ''; showBtn.style.display = '';
+  } else {
+    dlgT.textContent = 'Позвать официанта';
+    dlgP.textContent = 'Поднимите руку или покажите этот экран — к вам подойдут.';
+    songIn.style.display = 'none'; showBtn.style.display = 'none';
+    big.style.display = 'block'; bigQ.textContent = 'Нас ждут за столом';
+  }
+  dlg.showModal();
+}
+document.getElementById('song').addEventListener('click', () => openDlg('song'));
+document.getElementById('waiter').addEventListener('click', () => openDlg('waiter'));
+showBtn.addEventListener('click', () => {
+  const v = songIn.value.trim();
+  if (!v) { songIn.focus(); return; }
+  bigQ.textContent = v; big.style.display = 'block';
+});
+document.getElementById('close').addEventListener('click', () => dlg.close());
+</script>
+</body>
+</html>
