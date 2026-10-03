@@ -71,6 +71,7 @@ img{max-width:100%;display:block}
 .n{font:500 13px/1.35 'Montserrat',Arial,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:#F4EFE3;flex:1 1 auto;min-width:0}
 .meta{flex:0 0 auto;display:flex;align-items:baseline;gap:8px}
 .g{font:400 10.5px 'Jost',sans-serif;color:#9C9484;white-space:nowrap;font-variant-numeric:tabular-nums}
+.p .r{font-family:'Jost',sans-serif;font-size:.78em;padding-left:.1em}
 .p{font-family:'Prata',Georgia,serif;font-size:14px;color:#E6CE94;white-space:nowrap;font-variant-numeric:tabular-nums}
 .d{font:300 11px/1.45 'Jost',sans-serif;color:#C9C2B3;margin:-4px 0 2px}
 .add .n{text-transform:none;font-weight:400;font-size:12px;line-height:1.5}
@@ -161,7 +162,7 @@ function itemHTML(it, add) {
   if (it.gr) return '<div class="gr">' + esc(it.gr) + '</div>';
   const vol = it.g || (it.v ? it.v.split('/').map((x) => x.trim()).join(' / ') + ' л' : '');
   const meta = '<div class="meta">' + (vol ? '<div class="g">' + esc(vol) + '</div>' : '') +
-    '<div class="p">' + esc(it.p) + '</div></div>';
+    '<div class="p">' + esc(it.p).replace('₽', '<span class="r">₽</span>') + '</div></div>';
   return '<div class="it' + (add ? ' add' : '') + '"><div style="flex:1 1 auto;min-width:0"><div class="n">' +
     esc(it.n) + '</div>' + (it.d ? '<div class="d">' + esc(it.d) + '</div>' : '') + '</div>' + meta + '</div>';
 }
